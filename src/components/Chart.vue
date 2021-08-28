@@ -61,9 +61,11 @@ export default {
   watch: {
     inputUrl: function () {
       const youtubeBaseUrl = "https://www.youtube.com/watch?v=";
+      const regex = /.+watch\?v=([\w-]{11})/;
+      this.youtubeData = "";
+      this.channelTitle = "";
       if (this.inputUrl.indexOf(youtubeBaseUrl) !== -1) {
-        const videoId =
-          this.inputUrl.split("https://www.youtube.com/watch?v=")[1] || "";
+        const videoId = this.inputUrl.match(regex)[1];
         this.convertChartData(videoId);
       }
       return;
