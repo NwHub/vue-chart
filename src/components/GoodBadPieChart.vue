@@ -25,7 +25,7 @@ export default {
   created() {
     let sumGood = 0;
     let sumBad = 0;
-    this.youtubeData.videoDataList.forEach((videoData) => {
+    this.youtubeData.videoInfoList.forEach((videoData) => {
       sumGood += Number(videoData.likeCount);
       sumBad += Number(videoData.dislikeCount);
     });

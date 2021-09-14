@@ -45,7 +45,7 @@
 import ViewChart from "@/components/ViewChart.vue";
 import GoodBadChart from "@/components/GoodBadChart";
 import GoodBadPieChart from "@/components/GoodBadPieChart";
-import { getYouTube } from "@/repository/youtube.js";
+import { getYouTube } from "@/domain/youtube";
 export default {
   name: "Chart",
   components: {

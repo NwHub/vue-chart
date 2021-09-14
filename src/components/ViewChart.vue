@@ -26,7 +26,7 @@ export default {
     },
   }),
   created() {
-    const viewCountList = this.youtubeData.videoDataList.map((videoData) => {
+    const viewCountList = this.youtubeData.videoInfoList.map((videoData) => {
       return [
         new Date(videoData.publishedAt),
         Number(videoData.viewCount),
